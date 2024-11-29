@@ -32,30 +32,22 @@ class StarContent extends Component {
   }
   render() {
     return (
-      <>
+      <div className="bg-container">
         <h2 className="ms-5 mt-5 text-white"> May the force be with you! </h2>
-        <div className="bg-container">
-          <Row className="g-4 justify-content-center">
-            {this.state.films.map((film) => (
-              <Col
-                key={film.imdbID}
-                xs={6}
-                sm={4}
-                md={3}
-                lg={2}
-                className="mb-4"
-              >
-                <img
-                  className="img-fluid custom-image"
-                  src={film.Poster}
-                  alt="Spider-Man"
-                  style={{ objectFit: 'cover' }}
-                />
-              </Col>
-            ))}
-          </Row>
-        </div>
-      </>
+
+        <Row className="g-4 justify-content-center">
+          {this.state.films.map((film) => (
+            <Col key={film.imdbID} xs={6} sm={4} md={3} lg={2} className="mb-4">
+              <img
+                className="img-fluid custom-image"
+                src={film.Poster}
+                alt="Spider-Man"
+                style={{ objectFit: 'cover' }}
+              />
+            </Col>
+          ))}
+        </Row>
+      </div>
     )
   }
 }
