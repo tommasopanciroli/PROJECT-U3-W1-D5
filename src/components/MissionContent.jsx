@@ -1,15 +1,16 @@
 import { Component } from 'react'
 import { Col, Carousel } from 'react-bootstrap'
 
-const MarvelLink = 'http://www.omdbapi.com/?apikey=16b4ae61&s=captain america'
+const MissionLink =
+  'http://www.omdbapi.com/?apikey=16b4ae61&s=mission impossible'
 
-class CaptainContent extends Component {
+class MissionContent extends Component {
   state = {
     films: [],
   }
 
   getMovies = () => {
-    fetch(MarvelLink)
+    fetch(MissionLink)
       .then((response) => {
         console.log(response)
 
@@ -33,7 +34,7 @@ class CaptainContent extends Component {
   render() {
     return (
       <>
-        <h2 className="ms-5 mt-5 text-white"> At your left </h2>
+        <h2 className="ms-5 mt-5 text-white"> Tom Cruise e i suoi grandi classici </h2>
         <div className="bg-container">
           <Carousel interval={null}>
             {this.state.films.map((film) => (
@@ -62,4 +63,4 @@ class CaptainContent extends Component {
   }
 }
 
-export default CaptainContent
+export default MissionContent
