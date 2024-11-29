@@ -36,7 +36,7 @@ class MissionContent extends Component {
       <>
         <h2 className="ms-5 mt-5 text-white"> Tom Cruise e i suoi grandi classici </h2>
         <div className="bg-container">
-          <Carousel interval={null}>
+          <Carousel className='mx-5'>
             {this.state.films.map((film) => (
               <Carousel.Item>
                 <Col

@@ -35,7 +35,7 @@ class StarContent extends Component {
       <div className="bg-container">
         <h2 className="ms-5 mt-5 text-white"> May the force be with you! </h2>
 
-        <Row className="g-4 justify-content-center">
+        <Row className="g-4 justify-content-center mx-5">
           {this.state.films.map((film) => (
             <Col key={film.imdbID} xs={6} sm={4} md={3} lg={2} className="mb-4">
               <img
