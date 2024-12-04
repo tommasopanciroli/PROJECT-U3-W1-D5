@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-
-const DetailsLink = 'http://www.omdbapi.com/?apikey=16b4ae61&s=top gun'
+import { Row, Col } from 'react-bootstrap'
 
 const MovieDetails = () => {
   const [films, setFilms] = useState()
@@ -31,10 +30,21 @@ const MovieDetails = () => {
   }, [])
 
   return (
-    <div>
-      {films.map((film) => {
-        return <img src={film.Poster} alt="copertina" />
-      })}
+    <div className="bg-container">
+      <h2 className="ms-5 mt-5 text-white"> Maverick, Iceman! A rapporto</h2>
+
+      <Row className="g-4 justify-content-center mx-5">
+        {films.map((film) => (
+          <Col key={film.imdbID} xs={6} sm={4} md={3} lg={2} className="mb-4">
+            <img
+              className="img-fluid custom-image"
+              src={film.Poster}
+              alt="Spider-Man"
+              style={{ objectFit: 'cover' }}
+            />
+          </Col>
+        ))}
+      </Row>
     </div>
   )
 }
