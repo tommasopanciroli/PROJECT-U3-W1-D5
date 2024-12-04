@@ -19,10 +19,8 @@ function App() {
           <Container>
             <Routes>
               <Route path="/tvshows" element={<StarContent />} />
-            </Routes>
-            <Routes>
               <Route
-                path="/home"
+                path="/"
                 element={
                   <Row className=" d-flex flex-wrap">
                     <CaptainContent />
@@ -30,6 +28,7 @@ function App() {
                   </Row>
                 }
               />
+              <Route path='/moviedetails' />
             </Routes>
           </Container>
         </main>
