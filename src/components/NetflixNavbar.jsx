@@ -1,7 +1,6 @@
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import logo from '../assets/img/logo.png'
-
-
+import { Link } from 'react-router-dom'
 
 const NetflixNavbar = (props) => {
   return (
@@ -11,14 +10,24 @@ const NetflixNavbar = (props) => {
           {' '}
           <img src={logo} alt="logo" width={100} />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className='bg-light'/>
-        <Navbar.Collapse id="basic-navbar-nav" >
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-light" />
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link className='text-white' href="#home">Home</Nav.Link>
-            <Nav.Link className='text-white' href="#link">Tv Shows</Nav.Link>
-            <Nav.Link className='text-white' href="#link">Movies</Nav.Link>
-            <Nav.Link className='text-white' href="#link">Recently Added</Nav.Link>
-            <Nav.Link className='text-white' href="#link">My List</Nav.Link>
+            <Link to="/home" className="nav-link text-white">
+              <div>Home</div>
+            </Link>
+            <Link to="/tvshows" className="nav-link text-white">
+              <div>Tv Shows</div>
+            </Link>
+            <Link className="nav-link text-white">
+              <div>Movies</div>
+            </Link>
+            <Link className="nav-link text-white">
+              <div>Recently Added</div>
+            </Link>
+            <Link className="nav-link text-white">
+              <div>My List</div>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
