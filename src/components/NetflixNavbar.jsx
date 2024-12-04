@@ -2,6 +2,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap'
 import logo from '../assets/img/logo.png'
 
 
+
 const NetflixNavbar = (props) => {
   return (
     <Navbar collapseOnSelect expand="lg">
